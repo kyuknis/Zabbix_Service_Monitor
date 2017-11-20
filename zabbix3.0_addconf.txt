@@ -1,0 +1,9 @@
+### Option: UserParameter
+#	User-defined parameter to monitor. There can be several user-defined parameters.
+#	Format: UserParameter=<key>,<shell command>
+#
+# Mandatory: no
+# Default:
+# UserParameter=
+UserParameter=orgservice.discovery,powershell -NoProfile -ExecutionPolicy Bypass -File "S:\Zabbix\templates\Zabbix_Services_monitoring\get_services.ps1"
+UserParameter=orgservice.state[*],powershell -NoProfile -ExecutionPolicy Bypass -File S:\Zabbix\templates\Zabbix_Services_monitoring\get_servicestate.ps1 "$1"
