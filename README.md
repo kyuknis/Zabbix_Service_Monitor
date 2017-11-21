@@ -1,5 +1,5 @@
-# Zabbix Service Monitor
-The Zabbix Service Monitor is a Zabbix template complete with PowerShell scripts that will allow you to monitor all of your Windows services quickly and easily. All Windows services will be discovered when the template is properly applied to a Windows client. Since it is unlikely that you will want to monitor literally all Windows services, all triggers are disabled by default.
+# Windows Service Monitor for Zabbix
+The Zabbix Service Monitor is a Zabbix template complete with PowerShell scripts that will allow you to monitor all of your Windows services quickly and easily. All Windows services will be discovered when the template is properly applied to a Windows client. Since it is unlikely that you will want to actually monitor all Windows services, all triggers are disabled by default. To be alerted when a service goes down simply enable the generated trigger.
 
 # Installation
   1. Copy all of the included files to your preffered template directory on the client that will be monitored.
