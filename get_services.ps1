@@ -3,7 +3,7 @@
 #
 ################################################################################
 
-#Get all of the Windows services
+# Get all of the Windows services
 $services = Get-Service | Select-Object name
 
 # Create the response template to build off of.
@@ -14,7 +14,7 @@ ForEach($s in $services) {
     $response['data'] += @{ '{#SERVICE}' = $s.name}
 }
 
-# Convert  the response to JSON for Zabbix
+# Convert the response to JSON for Zabbix
 $response = ConvertTo-Json $response
 
 # Write the JSON encoded response for the Zabbix agent to send to the server
