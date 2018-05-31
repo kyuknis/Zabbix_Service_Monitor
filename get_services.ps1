@@ -11,7 +11,7 @@ $response = @{data = @()}
 
 # Add each of the services with the appropriate key ("{#SERVICE}") to the data array
 ForEach($s in $services) {
-    $response['data'] += @{ '{#SERVICE}' = $s.name}
+    $response['data'] += @{ '{#SERVICE}' = $s.name }
 }
 
 # Convert the response to JSON for Zabbix
